@@ -1,4 +1,4 @@
-# DB code test
+# DB case study
 ###### A test/exercise project.
 
 
