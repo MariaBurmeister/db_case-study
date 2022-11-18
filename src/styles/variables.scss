@@ -1,0 +1,200 @@
+$accent-color: #EC0016;
+$accent-color-strong: #c50014;
+$accent-color-muted: #fcc8c3;
+$text-on-accent: white;
+
+$secondary-accent: #ddded6;
+
+$border-radius-sm: 0.3rem;
+
+$shadow-button-hover: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -thin;
+
+%button-base {
+
+  margin:  0.5rem 0.25rem;
+  padding: 0.5rem 1rem;
+
+  border: 1px solid;
+  border-radius: $border-radius-sm;
+
+  cursor: pointer;
+  font-size: small;
+  font-weight: 700;
+
+  transition: all 0.3s ease-in-out;
+
+  outline: solid 0px;
+
+  &:hover,
+  &:focus  {        
+      outline: solid thin;
+      outline-offset: -1px;
+      
+    //   box-shadow: $shadow-button-hover;
+  }
+
+  &:active {
+      outline: solid thin;
+      outline-offset: -1px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+%button-primary {
+    @extend %button-base;
+
+    background-color: $accent-color;
+    color: $text-on-accent;
+
+    &:hover {        
+        outline-color: $accent-color;
+    }
+
+    &:focus {        
+        outline-color: $accent-color;
+    }
+
+    &:active {
+        background-color: $accent-color-strong;
+        outline-color: $accent-color-strong;
+    }
+
+    &:disabled {
+        background-color: lightgray;
+        color: white;
+    }
+
+}
+
+%check-input-as-a-button-base {
+    @extend %button-base;
+
+    max-width: 50vw;
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    
+    
+    >label {
+        text-overflow: ellipsis;
+        border-radius: $border-radius-sm;
+
+    }
+
+    &:focus-within {        
+        outline-style:solid;
+        outline-width: thin;
+        outline-offset: -1px;
+        
+    }
+
+    &.label_checked {
+
+        &:focus-within {        
+            outline-style:solid;
+            outline-width: thin;
+            outline-offset: -1px;            
+        }
+    }
+}
+
+%check-input-as-button-primary {
+    @extend %check-input-as-a-button-base;
+
+    background-color: $accent-color-muted;
+    color: $text-on-accent;
+
+
+    text-align: center;
+    
+    &:hover {        
+        background-color: $accent-color;
+        outline-color: $accent-color;
+        
+        box-shadow: $shadow-button-hover;
+    }
+
+    &:focus-within {        
+        background-color: $accent-color;
+        outline-color: $accent-color;
+        
+        box-shadow: $shadow-button-hover;
+    }
+    
+    &:active {
+        background-color: $accent-color-strong;
+        outline-color: $accent-color-strong;
+    }
+
+    &.label_checked {
+        background-color: $accent-color;
+        color: $text-on-accent;
+        
+        &:hover {
+            background-color: $accent-color-strong;
+            outline-color: $accent-color-strong;
+
+            box-shadow: $shadow-button-hover;
+        }
+
+        &:focus-within {
+            background-color: $accent-color-strong;
+            outline-color: $accent-color-strong;     
+
+            box-shadow: $shadow-button-hover;
+
+            &:hover {
+                background-color: $accent-color-strong;
+                outline-color: $accent-color-strong;            
+            }
+        }
+
+        &:active {
+            background-color: $accent-color-muted;            
+            outline-color: $accent-color-muted;
+            
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+            background-color: lightgray;
+            color: white;
+            outline: none;
+            box-shadow: none;
+        }
+        
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        background-color: lightgray;
+        color: white;
+        outline: none;
+        box-shadow: none;
+    }
+
+    input {
+        @extend %screen-reader-only
+    }
+}
+
+%screen-reader-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    word-wrap: normal;
+}

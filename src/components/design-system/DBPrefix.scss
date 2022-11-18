@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.db-particle {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: $accent-color;
+    text-underline-offset: 0.8rem;
+
+    line-height: 3rem;
+}

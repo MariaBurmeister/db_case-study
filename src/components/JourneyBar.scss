@@ -1,0 +1,70 @@
+@import '../styles/variables.scss';
+.journey {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 340px)  {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        justify-content: stretch;
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+.journey-bar {
+    display: block;
+    width: 100%;
+
+    border: none;
+    border-top: 4px solid $secondary-accent;
+
+    @media screen and (max-width: 340px)  {
+        flex-grow: 1;
+        width: auto;
+        border-top: none;
+        border-left: 4px solid $secondary-accent;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+.journey-start {
+    background-color: white;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: 2px solid $secondary-accent;
+    left: 0;
+    top: -0.25rem;
+
+    margin: 0;
+
+}
+
+.journey-end {
+    background-color: white;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: 2px solid $secondary-accent;
+
+    margin: 0;
+
+
+}

@@ -1,0 +1,58 @@
+.journey-plan {
+    margin: 1rem 0;
+    padding: 0;
+    
+    position: relative;
+
+    @media screen and (max-width: 340px)  {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;    }
+}
+
+.journey-information {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 340px)  {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 1rem;
+    }
+    
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.start {
+        align-items: flex-start ;
+    }
+
+    &.end {
+        align-items: flex-end ;
+        >p {
+            text-align: right;
+        }
+    }
+
+    @media screen and (max-width: 340px)  {
+        > p{
+            margin: 0.3rem 0;
+        }
+
+        &.end {
+            align-items: flex-start;
+            >p {
+                text-align: right;
+            }
+        }
+    }
+}

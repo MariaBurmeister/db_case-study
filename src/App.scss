@@ -1,0 +1,54 @@
+@import './styles/variables.scss';
+@font-face {
+  font-family: 'DB Screen Head';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./assets/fonts/dbscreenhead-black.woff') format('woff');
+}
+@font-face {
+  font-family: 'DB Screen Sans DR';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/dbscreensans-digitalregular.woff') format('woff');
+}
+@font-face {
+  font-family: 'DB Screen Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./assets/fonts/dbscreensans-bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'DB Screen Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/dbscreensans-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'DB Screen Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/dbscreensans-medium.woff') format('woff');
+}
+
+body {
+  font-family: 'DB Screen Sans DR';
+  box-sizing: border-box;
+}
+
+p{
+  font-size: small;
+}
+
+.h1 {
+  font-family: 'DB Screen Head';
+  font-size: 1.5rem;
+}
+
+.h3{
+  font-family: 'DB Screen Head';
+  font-size: medium;
+}
+
+.sr-only:not(:focus):not(:active) {
+  @extend %screen-reader-only;
+}
