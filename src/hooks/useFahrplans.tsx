@@ -9,8 +9,6 @@ export interface Fahrplan {
     endtime: string;
 }
 
-
-
 export type Stretch = 'to' | 'from';
 export type Status = "LOADING" | "READY" | "ERROR";
 export interface FahrplanResults {status: Status; fahrplans: Fahrplan[]; stretch:Stretch; setSelectedStretch: (stretch: Stretch) => void; }
@@ -26,7 +24,7 @@ export const useFahrplans = ({location}:{location: Station}): FahrplanResults =>
     useEffect(() => {
       setStatus("LOADING");
       getFahrplans(url).then(({ status, fahrplans }) => {
-          setFahrplans(fahrplans);
+          setFahrplans(sortFahrplans(fahrplans));
           setStatus(status);
       });
     }, [url, selectedStretch]);  
@@ -55,3 +53,11 @@ const getFahrplans =  async (url: string): Promise<{status: Status; fahrplans:Fa
       });
   };
   
+  
+const sortFahrplans = (fahrplans: Fahrplan[]) => {
+  return fahrplans.sort((a, b) => {
+      const [aStartHour, aStartMins] = a.starttime.split(':').map((s) => Number(s));
+      const [bStartHour, bStartMins] = b.starttime.split(':').map((s) => Number(s));
+      return (aStartHour*60 + aStartMins) - (bStartHour*60 + bStartMins);
+  });
+}
