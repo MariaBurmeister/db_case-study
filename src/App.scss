@@ -3,35 +3,40 @@
   font-family: 'DB Screen Head';
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
   src: url('./assets/fonts/dbscreenhead-black.woff') format('woff');
 }
 @font-face {
   font-family: 'DB Screen Sans DR';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url('./assets/fonts/dbscreensans-digitalregular.woff') format('woff');
 }
 @font-face {
   font-family: 'DB Screen Sans';
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
   src: url('./assets/fonts/dbscreensans-bold.woff') format('woff');
 }
 @font-face {
   font-family: 'DB Screen Sans';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url('./assets/fonts/dbscreensans-regular.woff') format('woff');
 }
 @font-face {
   font-family: 'DB Screen Sans';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('./assets/fonts/dbscreensans-medium.woff') format('woff');
 }
 
 body {
-  font-family: 'DB Screen Sans DR';
+  font-family: 'DB Screen Sans DR' sans-serif;
   box-sizing: border-box;
 }
 
