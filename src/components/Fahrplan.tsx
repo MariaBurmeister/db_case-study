@@ -13,7 +13,7 @@ export const Fahrplan: FunctionComponent<{plan: FahrplanType; key?: Key}> = ({pl
                 <p className="h3" aria-label="von">{from}</p>
                 <p className="time" aria-label="Abfahrt">{`${starttime} Uhr`}</p>
             </div>
-            <p className="duration" aria-label="Dauer">{hours}h {min}min</p>
+            <p className="duration" aria-label="Dauer">{`${hours}h ${min}min`}</p>
             <div className="journey-step end">
                 <p className="h3" aria-label="to">{to}</p>
                 <p className="time" aria-label="Anfahrt">{`${endtime} Uhr`}</p>
