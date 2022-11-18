@@ -27,6 +27,12 @@
     
 }
 
+.duration {
+    text-align: center;
+    padding-top: 1.3rem;
+}
+
+
 .journey-step {
     display: flex;
     flex-direction: column;
@@ -41,6 +47,10 @@
         >p {
             text-align: right;
         }
+    }
+
+    >.time {
+        font-weight: bold;
     }
 
     @media screen and (max-width: 340px)  {

@@ -14,7 +14,6 @@ $shadow-button-hover: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05)
   margin:  0.5rem 0.25rem;
   padding: 0.5rem 1rem;
 
-  border: 1px solid;
   border-radius: $border-radius-sm;
 
   cursor: pointer;
@@ -27,14 +26,12 @@ $shadow-button-hover: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05)
 
   &:hover,
   &:focus  {        
-      outline: solid thin;
+      outline: solid 2px;
       outline-offset: -1px;
-      
-    //   box-shadow: $shadow-button-hover;
-  }
+    }
 
   &:active {
-      outline: solid thin;
+      outline: solid 2px;
       outline-offset: -1px;
   }
 
@@ -118,15 +115,11 @@ $shadow-button-hover: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05)
     &:hover {        
         background-color: $accent-color;
         outline-color: $accent-color;
-        
-        box-shadow: $shadow-button-hover;
     }
 
     &:focus-within {        
         background-color: $accent-color;
         outline-color: $accent-color;
-        
-        box-shadow: $shadow-button-hover;
     }
     
     &:active {
@@ -142,14 +135,12 @@ $shadow-button-hover: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05)
             background-color: $accent-color-strong;
             outline-color: $accent-color-strong;
 
-            box-shadow: $shadow-button-hover;
         }
 
         &:focus-within {
             background-color: $accent-color-strong;
             outline-color: $accent-color-strong;     
 
-            box-shadow: $shadow-button-hover;
 
             &:hover {
                 background-color: $accent-color-strong;

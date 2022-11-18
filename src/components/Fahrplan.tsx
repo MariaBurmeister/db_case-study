@@ -11,12 +11,12 @@ export const Fahrplan: FunctionComponent<{plan: FahrplanType; key?: Key}> = ({pl
             <section className="journey-information">
             <div className="journey-step start">
                 <p className="h3" aria-label="von">{from}</p>
-                <p aria-label="Abfahrt">{`${starttime} Uhr`}</p>
+                <p className="time" aria-label="Abfahrt">{`${starttime} Uhr`}</p>
             </div>
             <p className="duration" aria-label="Dauer">{hours}h {min}min</p>
             <div className="journey-step end">
-                <p  className="h3" aria-label="to">{to}</p>
-                <p aria-label="Anfahrt">{`${endtime} Uhr`}</p>
+                <p className="h3" aria-label="to">{to}</p>
+                <p className="time" aria-label="Anfahrt">{`${endtime} Uhr`}</p>
             </div>
             </section>
             <JourneyBar/>
