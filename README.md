@@ -1,4 +1,4 @@
-# Wo/was denn essen wir heute?
+# DB code test
 ###### A test/exercise project.
 
 
