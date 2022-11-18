@@ -28,8 +28,9 @@
 }
 
 .duration {
-    text-align: center;
-    padding-top: 1.3rem;
+    @media screen and (min-width: 340px)  {
+        padding-top: 1.3rem;
+    }
 }
 
 
@@ -61,7 +62,7 @@
         &.end {
             align-items: flex-start;
             >p {
-                text-align: right;
+                text-align: left;
             }
         }
     }
