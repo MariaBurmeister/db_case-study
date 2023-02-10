@@ -1,5 +1,14 @@
 # DB case study
-###### A test/exercise project.
+A test/exercise project.
+
+### description:
+  - Challenge consisted on implementing a design using your chosen framework.
+  - Went the extra mile and implemented a fully responsive UI.
+
+### technolgies:
+  - React
+  - Sass
+  - Typescript
 
 
 ## Run the project:
