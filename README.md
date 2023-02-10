@@ -1,5 +1,5 @@
 # DB case study
-A test/exercise project.
+A code test/exercise project.
 
 ### description:
   - Challenge consisted on implementing a design using your chosen framework.
